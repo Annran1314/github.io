@@ -1,189 +1,392 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="renderer" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Annran</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="墨卷" />
+
+
+    
+    
+
+
+<meta property="og:type" content="website">
 <meta property="og:title" content="Annran">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Annran">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Annran">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link rel="stylesheet" href="/main.css?v=4.0.0.css">
-  
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Annran" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+    <style> .article { opacity: 0;} </style>
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Annran</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: true,
+        isPost: false,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
 
 </head>
-
 <body>
-  <div id="container" q-class="show:isCtnShow">
-    <canvas id="anm-canvas" class="anm-canvas"></canvas>
-    <div class="left-col" q-class="show:isShow">
-      <div class="overlay"></div>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
 <div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			<img src="null" class="js-avatar">
-		</a>
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">墨卷</a></h1>
+        </hgroup>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">墨卷</a></h1>
-		</hgroup>
+        
 
-		
+        
 
-		<nav class="header-menu">
-			<ul>
-			
-				<li><a href="/">主页</a></li>
-	        
-				<li><a href="/tags/技术">漫谈技术</a></li>
-	        
-				<li><a href="/tags/随笔">心情随笔</a></li>
-	        
-			</ul>
-		</nav>
-		<nav class="header-smart-menu">
-	        
-    		
-    			
-    			<a data-idx="0" q-on="click: openSlider(e, 'innerArchive')" href="javascript:void(0)">所有文章</a>
-    			
-    			
-            
-    			
-    			<a data-idx="1" q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-    			
-            
-    			
-    			<a data-idx="2" q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
-    			
-    			
-            
-    			
-    			<a data-idx="3" q-on="click: openSlider(e, '友情链接1')" href="javascript:void(0)">http://localhost:4000/</a>
-    			
-    			
-            
-    			
-    			<a data-idx="4" q-on="click: openSlider(e, '友情链接2')" href="javascript:void(0)">http://localhost:4000/</a>
-    			
-    			
-            
-    			
-    			<a data-idx="5" q-on="click: openSlider(e, '友情链接3')" href="javascript:void(0)">http://localhost:4000/</a>
-    			
-    			
-            
-    			
-    			<a data-idx="6" q-on="click: openSlider(e, '友情链接4')" href="javascript:void(0)">http://localhost:4000/</a>
-    			
-    			
-            
-    			
-    			<a data-idx="7" q-on="click: openSlider(e, '友情链接5')" href="javascript:void(0)">http://localhost:4000/</a>
-    			
-    			
-            
-    			
-    			<a data-idx="8" q-on="click: openSlider(e, '友情链接6')" href="javascript:void(0)">http://localhost:4000/</a>
-    			
-    			
-            
-		</nav>
-		<nav class="header-nav">
-			<div class="social">
-				
-					<a class="github" target="_blank" href="https://github.com/Annran1314" title="github"><i class="icon-github"></i></a>
-		        
-					<a class="weibo" target="_blank" href="http://www.weibo.com/2524569464/info" title="weibo"><i class="icon-weibo"></i></a>
-		        
-					<a class="jianshu" target="_blank" href="http://www.jianshu.com/users/b77b6d41cc52/timeline" title="jianshu"><i class="icon-jianshu"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-		        
-					<a class="mail" target="_blank" href="/ruiyang.fei@foxmail.com" title="mail"><i class="icon-mail"></i></a>
-		        
-					<a class="linkedin" target="_blank" href="#" title="linkedin"><i class="icon-linkedin"></i></a>
-		        
-			</div>
-		</nav>
-	</header>		
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/随笔">随笔</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa QQ" href="http://user.qzone.qq.com/1072400313/main" title="QQ"></a>
+                            
+                                <a class="fa 新浪微博" href="http://www.weibo.com/2524569464/info" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Annran1314" title="GitHub"></a>
+                            
+                                <a class="fa 简书" href="http://www.jianshu.com/users/b77b6d41cc52/timeline" title="简书"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
 </div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">墨卷</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">墨卷</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/随笔">随笔</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa QQ" target="_blank" href="http://user.qzone.qq.com/1072400313/main" title="QQ"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://www.weibo.com/2524569464/info" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Annran1314" title="GitHub"></a>
+                            
+                                <a class="fa 简书" target="_blank" href="http://www.jianshu.com/users/b77b6d41cc52/timeline" title="简书"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-写给相遇" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/08/写给相遇/" class="article-date">
+      <time datetime="2016-12-08T06:29:27.307Z" itemprop="datePublished">2016-12-08</time>
+</a>
+
 
     </div>
-    <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"><i class="icon-sort"></i></div>
-  		<h1 class="header-author js-mobile-header hide">墨卷</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				<img src="null" class="js-avatar">
-			</div>
-			<hgroup>
-			  <h1 class="header-author">墨卷</h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/tags/技术">漫谈技术</a></li>
-		        
-					<li><a href="/tags/随笔">心情随笔</a></li>
-		        
-		        
-		        	<li><a href="/archives">所有文章</a></li>
-		        
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="https://github.com/Annran1314" title="github"><i class="icon-github"></i></a>
-			        
-						<a class="weibo" target="_blank" href="http://www.weibo.com/2524569464/info" title="weibo"><i class="icon-weibo"></i></a>
-			        
-						<a class="jianshu" target="_blank" href="http://www.jianshu.com/users/b77b6d41cc52/timeline" title="jianshu"><i class="icon-jianshu"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
-			        
-						<a class="mail" target="_blank" href="/ruiyang.fei@foxmail.com" title="mail"><i class="icon-mail"></i></a>
-			        
-						<a class="linkedin" target="_blank" href="#" title="linkedin"><i class="icon-linkedin"></i></a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
-
-      <div id="wrapper" class="body-wrap">
-        <div class="menu-l">
-          <div class="canvas-wrap">
-            <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
-          </div>
-          <div id="js-content" class="content-ll">
-            
   
-    <article id="post-双城记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
     
     <div class="article-entry" itemprop="articleBody">
       
+          
+        <hr>
+<h2 id="写给相遇"><a href="#写给相遇" class="headerlink" title="写给相遇"></a>写给相遇</h2><p>写在前面的话：那些无忧的日子里，感谢有你们的相伴。在这忙碌的时间的里，抽出些许空闲，忆起那些无法回去的过往。</p>
+<hr>
+<p>遇见，真好。当我敲打出这几个字时，心是暖的。脑海里如同电影屏幕那般，瞬间闪过曾经在一起过的人，那些发生过的事儿。回想所有的相遇，心里都是美好的！如果可以，写一封关于相遇的信寄给未来的我，以及我的期许——那些年里，有你们陪我一起走。<br>已至凌晨了，却依然不眠，这样子的时间里，只适合一个人静静敲打手中的键盘，拨弄着属于自己的文字。提笔落墨那刻，已然明白：用手中的键盘刻画出每一次的相遇，那些逝去的过往，那些相逢一笑的瞬间，为自己的大学留下些什么。</p>
+<hr>
+<p>时光可以回到四年前？此刻的我，不知怎么的，想重新看看那时候的自己。想知道,在没有遇见你们之前，是怎样子的模样，与现在的自己有何不同。其实都不用猜想，我都已经知道了答案，如同写的毕业寄语那般：大学四年，我遇见了更好的自己。告诉你的是，此时在看这篇随笔的你，你就是其中的一份子，与我们熟悉度无关，只是或多或少的事儿。遇见你们之前，我的世界里可以形容为一个人站在冰川之中，抑或是在汪洋大海里潜游，一点跟色彩有关的物都没有。到现在，我都记得自己刚上大学那段时间愁眉苦脸的样子，连笑的时候都显得那么僵硬。在见到你们之后，有了自己的喜怒哀乐，专属于自己的心情表，开始审视生活的那些色彩也有了自己的评判准则，做每一件事情都有了心情。也学这些与你们无关，但我知道，这些都是遇见了你们之后发生的事儿。所以，感谢你们来过我的世界，成为了我生命中的风景，因为你们，我变得更好了。</p>
+<hr>
+<p>那一年的九月，如期初到这个陌生环境，已注定我们四年就在一起。四年里，我们相处得很融洽，从来都没有闹过矛盾，最值得骄傲的事儿——四年里，每逢同学串门，说一句“你们宿舍怎么可以这样子干净”。遇见你们，才知道有一种情叫做室友情。在那些零碎的日子里，我们挑灯夜读攻克每一次考试壁垒，考试作弊不惜被老师逮到，寒冬里吃暴风雪冻得直发抖……“起床了，要上课了”“帮忙拿下手机”“走，一起到外面吃饭去”“下去吃饭，带个饭回来”……每一次的经历，每一次的对话都是一次美好的回忆，我会好好珍藏于心：与你们在一起，才知道那句“人生在世多称意，室友陪你度风雨”。第二年的六月，与你们一起去了一个陌生地方生活了十天，只为了那些英山的小孩送去我们的爱心与关怀。我们一起与孩子欢声笑语，炎炎烈日挨家挨户走访每一个学生的家庭，行走在大山深处留下我们的身影。如今的我回想，那些日子的笑与乐、痛与苦，只有我们体验过了、自己才懂。在以后相处的时间里，我觉得那是一种关于英山情的延续。西区操场、西区食堂、中区体育馆前、东区食堂，都会有我们一起喝奶茶的影子，三五成群的闲聊扯淡。大学二年级的暑假，遇见你们也许时间点上也许不是很好，刚从经历一段未结果的感情关乎心情低落。我们在一起两个月只为了第六届全国大学生工程制图大赛，每天上午四个小时的手绘下午四个小时机绘，都在暗自比拼谁的速度快谁的质量好，跟你们较真我也慢慢在变。我们的付出都是有回报，那一年的工程制图大赛团体一等奖以及一次可以算是游玩的旅行。至今还记得，我们比赛完了拖着官方的制图工具去白云山游玩，被售票人员认为是一群艺术写真可以免票进去，那是我觉得此生：作为工科男生里“艺术”二字最近的一次。这一次遇见你们，一起去了历史古城——洛阳，“所有的游玩都是以实习的名义”，在古城里熟悉你们对于我这种有诗词情结的男生可谓是意义非凡。每天实习完了，第一件事都是打开美团各种寻觅关于吃的地方，发现形容面的量词从“碗”变成了“盘”。周末第一次与你们一起来到了，小学一年级语文第一课关于祖国大好河山风景“龙门石窟”，游完后立作打油诗——一朝入龙门，梦回千年窟。香山白园墓，近在景尽处。在洛阳的时候，曾听到如下对话——“班长去哪里了”“女生在哪里他就在那里”，也不知道是真是假，与你们在一起真的可以玩得好开心——“我们是否还可以再来一次实习”。</p>
+<hr>
+<p>第一次在科技楼圆形报告厅遇见你，四年里我们的交集依旧那么少，在我心情低落到极点，是你陪我聊天度过那段灰暗的日子，不允许我说一句“谢谢”。第一次在一教小树林里见到你，那时的我忙着吃盒饭，日后闹着让我请喝奶茶、请吃饭，这样子的我那样子的你不知可以这么熟。第一次找我帮忙，我记得应是巡司河畔见面，也会因为我不愿让你答谢我喝奶茶而耿耿于怀，我们关系也就像你口中那般“君子之交淡如水”，缘深缘浅任谁都无从得知…………还有很多来过我生命中的人，只是记忆模糊了些。在这个无人的深夜里，回想往昔种种，该是一种怎么样的欢喜，在你们身上，我见到另一个自己，所谓“物以类聚人以群分”，你是一个怎么样的人也就会遇见什么样的人</p>
+<hr>
+<p>人世间所有的相遇都是久别重逢，暂时的离别只为了下次更好遇见。等到那一天，我遇见了更多人，自己变得足够优秀与成熟；等到那一天，我知道如何去爱一个人，如何珍惜身边每一个人，我想再一次遇到你们。曾经看到过一句：如何遇见不要紧，要紧的是如何告别，有些人终究只能陪我们走一程，日后想起那也是一段善缘。一次结束全文，最适合不过了，剩下时间里，我们都要学会如何好好告别。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-维以永不伤" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/08/维以永不伤/" class="article-date">
+      <time datetime="2016-12-08T06:29:27.305Z" itemprop="datePublished">2016-12-08</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <hr>
+<h2 id="维以永不伤"><a href="#维以永不伤" class="headerlink" title="维以永不伤"></a>维以永不伤</h2><p><strong>写在前面的话</strong>：</p>
+<p>聚散无由，以平常心待之；缘深缘浅，任谁无法把握。散席行走间，见想见的人，做想做的事，如此可说再见了。明知再见不知何时，依然憧憬：不会太过遥远，此时的离别是为了下次的相逢。——写此文送给毕业了的我们，愿我们都顺风顺水走好余生的每一步。</p>
+<hr>
+<p>华灯初上，夜未央，独自发呆荧幕前。夏至未至，毕业是梦想开始的地方，我们不诉离殇。<br>-</p>
+<p>总说毕业遥遥无期，转眼就各奔东西，即使撑起笑容欢送，心中依旧哽咽。曾经的一切，在我们不经意间悄然滑过，蓦然回首试图挽留，如同指间流沙，越握紧流失越快。初入校门，绽放为生命喝彩的礼花，霎时人生平添许多色彩。闲潭云影日悠悠，物换星移几度秋，弹指间已是四年。入学时笑靥如花依稀在，如今挂上离别泪花。离别渲染时光，脚步也变得轻柔，却是道不出的沉重。青春在大学里凝结成茧，而此刻你我破茧冲出，在阵痛中化为彩蝶飞舞，舞动着自己的翅膀追寻那片属于自己的花丛。</p>
+<hr>
+<p>曾记得入学时，喜不自禁、窘态百出的自我介绍；曾记得军训时汗如雨下，欣喜而有烦躁的抱怨；曾记得刚刚相处时，战战兢兢、磕磕绊绊的轰然一笑；曾记得胡侃乱吹时，毫不相让的少年意气；曾记得逃课游玩，半路相遇时的宛然一笑；曾记得考试前大呼奈何，临抱佛脚的相互诘责；曾记得……一幕幕的场景如同一张张绚烂的剪贴画，串连成一部即将谢幕的电影，播放着我们的快乐和忧伤，记录着我们的青春和过往！曾经迷茫时的无助，升华成坚持的力量；曾经抉择时的痛苦，沉淀成坚定的信念；所有四年中的回忆，谱写成无悔的青春！在这个校园每一个角落，遗留着关于青春每一个故事，纵使想拎走也无从下手，因为这份东西过于沉重，而我不舍拿起。</p>
+<hr>
+<p>大学生活是那娟娟溪流，固执寻求自己要沉淀的尽头。虽说没有大江的磅礴，却是蜿蜒缠绵，不在乎尽头怎样结局，但留意沿岸风景，伴随着微风汲取青春的味道。不似大海那般波涛汹涌，却是清澈见底，碾转处万丈柔情。可是如今溪流到尽头，我们将融入社会的海洋，无论在将来哪个时间点，都不要忘记：滴滴涓流汇成海。如同千年古籍，书中百态言人生，匆匆翻阅着，未品出个中味道，却已到封底。只是可惜，大学生活却不是千年古籍，已经没有了重新细读的机会。哪怕读得很轻松，许多珍贵的角落也是惊鸿一瞥，永久合上这本书，依旧回想初读时欢快淋漓，缅怀沉浸书海美好时光。它教会我们成长，教会我们坚强。</p>
+<hr>
+<p>青春的车轮总是向前，不曾为谁停留亦未加速，不受外力作用遵循牛顿定律匀速行驶，留下的只是一道道时间的碾痕。目光越过碾痕看前方，那才是我们需要行驶的方向。有道是相濡以沫不如相忘于江湖，为了彼此的前程未来的幸福也罢，也许我们缘尽于此了。你我的未来在那朝阳升起的大海之上，而不是即将逝去的山中晚霞。唯有不停的奔跑才能看到更美的风景，或许在哪山顶之上我们依然那会相聚，领略那一览众山小的豪情：悟已往之不谏，知来者之可追，往昔既逝，来者何辞？</p>
+<hr>
+<p>青春散场，我们等待下一场的来临，希望我们挥挥初成的彩翼，击向那朝阳中金色的辉煌，多年的等待只为这一刻的飞翔。有着“直挂云帆济沧海，乘风破浪会有时”的豪情；有“天生我材必有用，千金散尽还复来”是自信；更有“任它雨打风吹，我自巍然不动”的坚韧。大学毕业了，而我却慢慢向你走来：你准备好了吗？</p>
+<h2 id="———"><a href="#———" class="headerlink" title="———-"></a>———-</h2><p><strong>后记</strong>：今天这个日子很特殊，是大学最后一天，也是入职第一天。本应早早入睡，无奈依然年少青涩：吃饭匆忙，外带房门钥匙，将自己锁在门外，办公室熬夜写书至天明。以散文书写毕业季的不伤感，用文字褪去心中离别，拾起人生的另一片天地。（标题“维以永不伤”出自诗经，取“只有把这件事写下来，才不至于永远地伤怀”之意）</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-双城记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/05/双城记/" class="article-date">
+      <time datetime="2016-12-05T10:13:50.664Z" itemprop="datePublished">2016-12-05</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
         <hr>
 <h2 id="Hello-Word"><a href="#Hello-Word" class="headerlink" title="Hello Word"></a>Hello Word</h2><p>欢迎你来到墨卷的个人博客，这是博客的测试页。</p>
 <p>这是一个最好的时代，这是个最坏的时代；</p>
@@ -197,24 +400,19 @@
 </ul>
 
       
-
-      
     </div>
+    
     <div class="article-info article-info-index">
       
       
-      
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2016/12/05/双城记/#more">展开全文 >></a>
-        </p>
-      
-
       
       <div class="clearfix"></div>
     </div>
+    
   </div>
+  
 </article>
 
 
@@ -224,185 +422,116 @@
 
 
 
+
   
   
-
-
-          </div>
-        </div>
-      </div>
+</div>
       <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2016 墨卷
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 墨卷
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
     </div>
-  </div>
 </footer>
     </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
     <script>
-	var yiliaConfig = {
-		mathjax: false,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false,
-		root: "/",
-		innerArchive: true
-	}
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
 </script>
 
-<script src="/./main.js?v=4.0.0.js"></script>
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
     
-<div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
-  <div class="tools-wrap">
-    
-    	<section class="tools-section tools-section-all" q-show="innerArchive">
-        <div class="search-wrap">
-          <input class="search-ipt" q-model="search" type="text" placeholder="find something…">
-          <i class="icon-search icon" q-show="search|isEmptyStr"></i>
-          <i class="icon-close icon" q-show="search|isNotEmptyStr" q-on="click:clearChose(e)"></i>
-        </div>
-        <div class="widget tagcloud search-tag">
-          <p class="search-tag-wording">tag:</p>
-          <label class="search-switch">
-            <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
-          </label>
-          <ul class="article-tag-list" q-show="showTags">
+        var oOpenInNew = {
             
-            <div class="clearfix"></div>
-          </ul>
-        </div>
-        <ul class="search-ul">
-          <p q-show="jsonFail" style="padding: 20px; font-size: 12px;">
-            缺失模块。<br/>1、在博客根目录（注意不是yilia根目录）执行以下命令：<br/> npm i hexo-generator-json-content --save<br/><br/>
-            2、在根目录_config.yml里添加配置：
-<pre style="font-size: 12px;" q-show="jsonFail">
-  jsonContent:
-    meta: false
-    pages: false
-    posts:
-      title: true
-      date: true
-      path: true
-      text: true
-      raw: false
-      content: false
-      slug: false
-      updated: false
-      comments: false
-      link: false
-      permalink: false
-      excerpt: false
-      categories: false
-      tags: true
-</pre>
-          </p>
-          <li class="search-li" q-repeat="items" q-show="isShow">
-            <a q-attr="href:path|urlformat" class="search-title"><i class="icon-quo-left icon"></i><span q-text="title"></span></a>
-            <p class="search-time">
-              <i class="icon-calendar icon"></i>
-              <span q-text="date|dateformat"></span>
-            </p>
-            <p class="search-tag">
-              <i class="icon-price-tags icon"></i>
-              <span q-repeat="tags" q-on="click:choseTag(e, name)" q-text="name|tagformat"></span>
-            </p>
-          </li>
-        </ul>
-    	</section>
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
     
+</script>
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-    	</section>
-    
-
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">生活这么逗逼，幸好还有书相伴，写身边人记身边事，如此已是足矣！</div>
-  	  	
-    	</section>
-    
-  </div>
-  
-</div>
-    <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. 
-            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-            Don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
   </div>
 </body>
 </html>
